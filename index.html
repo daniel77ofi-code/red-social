@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turbo Red | Red Social</title>
+    <title>Turbo Red | Comunidad de Autos</title>
     <style>
       * {
         box-sizing: border-box;
@@ -13,7 +13,7 @@
 
       body {
         font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, #eef3ff, #f8f9ff 50%, #eef9f5);
+        background: linear-gradient(135deg, #1a1a1a, #2d1a1a 50%, #0d0d0d);
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -25,29 +25,30 @@
         width: 100%;
         max-width: 1100px;
         min-height: 700px;
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: rgba(30, 30, 30, 0.9);
+        border: 2px solid #d4a574;
         border-radius: 28px;
         overflow: hidden;
         display: grid;
         grid-template-columns: 1.1fr 1fr;
-        box-shadow: 0 30px 70px rgba(37, 49, 90, 0.15);
+        box-shadow: 0 30px 70px rgba(220, 38, 38, 0.3), inset 0 0 50px rgba(212, 165, 116, 0.05);
       }
 
       .left {
-        background: linear-gradient(145deg, #152a74, #324bc5, #5d74ff);
+        background: linear-gradient(145deg, #1a0a0a, #4a1515, #cc0000);
         color: #fff;
         padding: 60px 50px;
         position: relative;
         display: flex;
         align-items: center;
+        overflow: hidden;
       }
 
       .left::before, .left::after {
         content: "";
         position: absolute;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(212, 165, 116, 0.08);
       }
 
       .left::before {
@@ -71,15 +72,16 @@
 
       .tag {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(212, 165, 116, 0.2);
+        border: 2px solid #d4a574;
         border-radius: 999px;
         padding: 10px 18px;
         font-size: 11px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: 700;
         margin-bottom: 22px;
+        color: #ffd700;
       }
 
       h1 {
@@ -87,10 +89,12 @@
         line-height: 1.05;
         margin-bottom: 18px;
         font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .left p {
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.85);
         font-size: 1.05rem;
         line-height: 1.8;
         max-width: 460px;
@@ -111,15 +115,16 @@
         display: block;
         font-size: 2rem;
         margin-bottom: 4px;
+        color: #ffd700;
       }
 
       .stat span {
-        color: rgba(255, 255, 255, 0.72);
+        color: rgba(255, 255, 255, 0.7);
         font-size: 0.86rem;
       }
 
       .right {
-        background: #f6f8ff;
+        background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
         padding: 36px 34px;
         display: flex;
         align-items: center;
@@ -135,15 +140,16 @@
         width: 60px;
         height: 60px;
         border-radius: 16px;
-        background: linear-gradient(135deg, #5d74ff, #7d8eff);
+        background: linear-gradient(135deg, #cc0000, #ff3333);
         display: grid;
         place-items: center;
         color: white;
         font-weight: 800;
         font-size: 1.35rem;
-        box-shadow: 0 15px 25px rgba(93, 116, 255, 0.35);
+        box-shadow: 0 15px 25px rgba(204, 0, 0, 0.5);
         margin-bottom: 18px;
         overflow: hidden;
+        border: 2px solid #ffd700;
       }
 
       .logo img {
@@ -156,11 +162,13 @@
       h2 {
         font-size: 2rem;
         margin-bottom: 8px;
-        color: #1d2433;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .subtitle {
-        color: #667085;
+        color: #b0b0b0;
         margin-bottom: 26px;
         line-height: 1.6;
       }
@@ -168,28 +176,32 @@
       .tabs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background: #e9efff;
+        background: #2a2a2a;
         padding: 6px;
         border-radius: 12px;
         gap: 6px;
         margin-bottom: 22px;
+        border: 1px solid #d4a574;
       }
 
       .tab {
         border: none;
         background: transparent;
-        color: #6b7280;
+        color: #909090;
         font-weight: 700;
         padding: 12px 16px;
         border-radius: 10px;
         cursor: pointer;
         transition: 0.25s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
       }
 
       .tab.active {
-        background: #fff;
-        color: #1f3dbb;
-        box-shadow: 0 10px 18px rgba(91, 108, 255, 0.08);
+        background: linear-gradient(135deg, #cc0000, #ff3333);
+        color: #fff;
+        box-shadow: 0 10px 18px rgba(204, 0, 0, 0.3);
       }
 
       .form {
@@ -215,7 +227,9 @@
         font-size: 0.92rem;
         font-weight: 700;
         margin-bottom: 8px;
-        color: #20263a;
+        color: #e0e0e0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .input-wrap {
@@ -226,18 +240,23 @@
         width: 100%;
         height: 52px;
         border-radius: 12px;
-        border: 1px solid #e5e7ef;
-        background: #fff;
+        border: 2px solid #444;
+        background: #2a2a2a;
         padding: 0 14px 0 16px;
         font-size: 1rem;
-        color: #1d2433;
+        color: #e0e0e0;
         outline: none;
         transition: 0.2s ease;
       }
 
       input:focus {
-        border-color: rgba(93, 116, 255, 0.75);
-        box-shadow: 0 0 0 4px rgba(93, 116, 255, 0.1);
+        border-color: #cc0000;
+        box-shadow: 0 0 0 4px rgba(204, 0, 0, 0.15);
+        background: #333;
+      }
+
+      input::placeholder {
+        color: #666;
       }
 
       .password-toggle {
@@ -248,7 +267,7 @@
         cursor: pointer;
         user-select: none;
         font-size: 1.05rem;
-        color: #707b96;
+        color: #d4a574;
       }
 
       .row {
@@ -258,52 +277,63 @@
         gap: 12px;
         margin: 4px 0 20px;
         font-size: 0.92rem;
-        color: #667085;
+        color: #b0b0b0;
       }
 
       .remember {
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        cursor: pointer;
       }
 
       .remember input {
         width: 16px;
         height: 16px;
+        cursor: pointer;
+        accent-color: #cc0000;
       }
 
       a {
-        color: #2644cf;
+        color: #ffd700;
         text-decoration: none;
         font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      a:hover {
+        color: #ffed4e;
       }
 
       .btn {
         width: 100%;
         border: none;
         height: 52px;
-        background: linear-gradient(135deg, #4d67ff, #677cff);
+        background: linear-gradient(135deg, #cc0000, #ff3333);
         color: #fff;
         border-radius: 12px;
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
-        box-shadow: 0 16px 24px rgba(93, 116, 255, 0.25);
-        transition: transform 0.18s ease;
+        box-shadow: 0 16px 24px rgba(204, 0, 0, 0.4);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .btn:hover {
-        transform: translateY(-1px);
+        transform: translateY(-2px);
+        box-shadow: 0 20px 30px rgba(204, 0, 0, 0.5);
       }
 
       .divider {
         position: relative;
         text-align: center;
         margin: 26px 0 18px;
-        color: #7b8799;
-        font-size: 0.8rem;
+        color: #707b96;
+        font-size: 0.75rem;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
         text-transform: uppercase;
       }
 
@@ -314,11 +344,11 @@
         left: 0;
         right: 0;
         height: 1px;
-        background: #e7ebf5;
+        background: #444;
       }
 
       .divider span {
-        background: #f6f8ff;
+        background: #1f1f1f;
         padding: 0 14px;
         position: relative;
       }
@@ -331,18 +361,27 @@
       }
 
       .social-btn {
-        border: 1px solid #e7ebf5;
-        background: #fff;
-        color: #1d2433;
+        border: 2px solid #444;
+        background: #2a2a2a;
+        color: #e0e0e0;
         border-radius: 12px;
         height: 46px;
         font-weight: 700;
         cursor: pointer;
+        transition: 0.2s ease;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .social-btn:hover {
+        border-color: #cc0000;
+        background: rgba(204, 0, 0, 0.1);
+        color: #ffd700;
       }
 
       .footer-text {
         text-align: center;
-        color: #667085;
+        color: #b0b0b0;
         font-size: 0.95rem;
       }
 
@@ -353,20 +392,22 @@
         border-radius: 10px;
         font-size: 0.92rem;
         font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .status.error {
         display: block;
-        background: rgba(239, 83, 80, 0.09);
-        border: 1px solid rgba(239, 83, 80, 0.2);
-        color: #d93b3b;
+        background: rgba(204, 0, 0, 0.15);
+        border: 2px solid #cc0000;
+        color: #ff6b6b;
       }
 
       .status.success {
         display: block;
-        background: rgba(27, 181, 116, 0.09);
-        border: 1px solid rgba(27, 181, 116, 0.2);
-        color: #1a9d67;
+        background: rgba(27, 181, 116, 0.15);
+        border: 2px solid #1bb574;
+        color: #4ade80;
       }
 
       @media (max-width: 900px) {
@@ -400,24 +441,24 @@
     <div class="container">
       <aside class="left">
         <div class="left-content">
-          <div class="tag">Turbo Red</div>
-          <h1>Tu comunidad empieza aquí.</h1>
+          <div class="tag">🏁 Turbo Red 🏁</div>
+          <h1>Acelera tu pasión por los autos.</h1>
           <p>
-            Comparte ideas, descubre personas con tus intereses y crea nuevas conexiones en una red social moderna, segura y llena de energía.
+            Conecta con otros apasionados del mundo automotriz, comparte modificaciones, organiza encuentros y vive la experiencia de una comunidad enfocada en velocidad, estilo y pasión sobre ruedas.
           </p>
 
           <div class="stats">
             <div class="stat">
-              <strong>10K+</strong>
-              <span>Usuarios activos</span>
+              <strong>25K+</strong>
+              <span>Motores encendidos</span>
             </div>
             <div class="stat">
-              <strong>250K</strong>
-              <span>Publicaciones</span>
+              <strong>500K</strong>
+              <span>Autos compartidos</span>
             </div>
             <div class="stat">
               <strong>4.9/5</strong>
-              <span>Valoración</span>
+              <span>Comunidad Premium</span>
             </div>
           </div>
         </div>
@@ -429,18 +470,18 @@
             <img src="assets/turbo-red-logo.png" alt="Turbo Red" onerror="this.parentElement.textContent='TR'" />
           </div>
           <h2>Bienvenido</h2>
-          <p class="subtitle">Inicia sesión para seguir conectando con tu comunidad.</p>
+          <p class="subtitle">Entra al circuito y conecta con la comunidad más potente.</p>
 
           <div class="tabs">
-            <button class="tab active" type="button" data-tab="login">Iniciar sesión</button>
-            <button class="tab" type="button" data-tab="register">Crear cuenta</button>
+            <button class="tab active" type="button" data-tab="login">Iniciar Sesión</button>
+            <button class="tab" type="button" data-tab="register">Registro Rápido</button>
           </div>
 
           <form id="loginForm" class="form active" novalidate>
             <div class="group">
               <label for="loginEmail">Correo electrónico</label>
               <div class="input-wrap">
-                <input id="loginEmail" type="email" placeholder="tuemail@ejemplo.com" />
+                <input id="loginEmail" type="email" placeholder="tumail@ejemplo.com" />
               </div>
             </div>
 
@@ -455,12 +496,12 @@
             <div class="row">
               <label class="remember">
                 <input type="checkbox" />
-                <span>Recordarme</span>
+                <span>Mantenerme en línea</span>
               </label>
               <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
 
-            <button class="btn" type="submit">Iniciar sesión</button>
+            <button class="btn" type="submit">Arranca el motor</button>
 
             <div class="divider"><span>o continúa con</span></div>
 
@@ -471,7 +512,7 @@
             </div>
 
             <p class="footer-text">
-              ¿No tienes cuenta? <a href="#" class="switch-link" data-tab="register">Crear cuenta</a>
+              ¿Eres nuevo en el circuito? <a href="#" class="switch-link" data-tab="register">Únete ya</a>
             </p>
 
             <div id="loginStatus" class="status"></div>
@@ -486,16 +527,16 @@
             </div>
 
             <div class="group">
-              <label for="registerUser">Nombre de usuario</label>
+              <label for="registerUser">Nombre de usuario (Nickname)</label>
               <div class="input-wrap">
-                <input id="registerUser" type="text" placeholder="@usuario" />
+                <input id="registerUser" type="text" placeholder="@tusobreturbo" />
               </div>
             </div>
 
             <div class="group">
               <label for="registerEmail">Correo electrónico</label>
               <div class="input-wrap">
-                <input id="registerEmail" type="email" placeholder="tuemail@ejemplo.com" />
+                <input id="registerEmail" type="email" placeholder="tumail@ejemplo.com" />
               </div>
             </div>
 
@@ -518,13 +559,13 @@
             <div class="row">
               <label class="remember">
                 <input id="terms" type="checkbox" />
-                <span>Acepto los términos</span>
+                <span>Acepto términos y condiciones</span>
               </label>
             </div>
 
-            <button class="btn" type="submit">Crear cuenta</button>
+            <button class="btn" type="submit">Comenzar la carrera</button>
 
-            <div class="divider"><span>o registrate con</span></div>
+            <div class="divider"><span>o regístrate con</span></div>
 
             <div class="socials">
               <button class="social-btn" type="button">Google</button>
@@ -533,7 +574,7 @@
             </div>
 
             <p class="footer-text">
-              ¿Ya tienes cuenta? <a href="#" class="switch-link" data-tab="login">Inicia sesión</a>
+              ¿Ya tienes cuenta? <a href="#" class="switch-link" data-tab="login">Sube a bordo</a>
             </p>
 
             <div id="registerStatus" class="status"></div>
@@ -591,12 +632,12 @@
 
         if (!email || !password) {
           status.className = 'status error';
-          status.textContent = 'Completa tu correo y contraseña.';
+          status.textContent = '⚠️ Carga todos los datos para arrancar.';
           return;
         }
 
         status.className = 'status success';
-        status.textContent = '¡Inicio de sesión exitoso!';
+        status.textContent = '🏁 ¡Motor encendido! Redirigiendo...';
       });
 
       document.getElementById('registerForm').addEventListener('submit', (e) => {
@@ -611,30 +652,30 @@
 
         if (!name || !user || !email || !password || !confirm) {
           status.className = 'status error';
-          status.textContent = 'Completa todos los campos.';
+          status.textContent = '⚠️ Completa todos los datos para entrar al circuito.';
           return;
         }
 
         if (password.length < 8) {
           status.className = 'status error';
-          status.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+          status.textContent = '⚠️ La contraseña debe tener al menos 8 caracteres.';
           return;
         }
 
         if (password !== confirm) {
           status.className = 'status error';
-          status.textContent = 'Las contraseñas no coinciden.';
+          status.textContent = '⚠️ Las contraseñas no coinciden.';
           return;
         }
 
         if (!terms) {
           status.className = 'status error';
-          status.textContent = 'Debes aceptar los términos.';
+          status.textContent = '⚠️ Debes aceptar los términos para continuar.';
           return;
         }
 
         status.className = 'status success';
-        status.textContent = '¡Cuenta creada correctamente!';
+        status.textContent = '🏁 ¡Bienvenido al circuito! Ya puedes iniciar sesión.';
       });
     </script>
   </body>
